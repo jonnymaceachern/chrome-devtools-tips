@@ -1,0 +1,77 @@
+/* 
+
+ ---------------------------------------------------------------------------
+ Custom colors
+ ---------------------------------------------------------------------------
+
+ Sass maps are used to create an associative array that can later be 
+ looped through to dynamically create a class for each item. An example 
+ would be the use of the .fill-facebook class to use facebooks branding 
+ as the background color or stroke of a component.
+
+ ---------------------------------------------------------------------------  
+    
+*/
+
+/*
+ =========================================================================== 
+ Social colors
+ =========================================================================== 
+*/
+
+$social-colors: (
+    facebook: hsla(222, 47%, 40%, 1),
+    twitter: hsla(198, 100%, 47%, 1),
+    linkedin: hsla(203, 100%, 35%, 1),
+    apple: hsla(0, 0%, 45%, 1),
+    google: hsla(217, 89%, 61%, 1),
+    google-plus: hsla(8, 74%, 53%, 1), 
+    youtube: hsla(0, 100%, 60%, 1), 
+    vimeo: hsla(200, 82%, 61%, 1), 
+    pinterest: hsla(0, 78%, 45%, 1),
+    yelp: hsla(5, 100%, 38%, 1),
+    dribbble: hsla(338, 82%, 60%, 1),
+    amazon: hsla(36, 100%, 50%, 1),
+    ebay: hsla(219, 89%, 30%, 1),
+    skype: hsla(198, 100%, 48%, 1),
+    instagram: hsla(208, 46%, 41%, 1),
+    dropbox: hsla(206, 89%, 46%, 1),
+    flickr: hsla(334, 100%, 46%, 1),
+    github: hsla(0, 0%, 18%, 1),
+    basecamp: hsla(121, 38%, 58%, 1),
+    tumblr: hsla(210, 37%, 30%, 1),
+    foursquare: hsla(206, 72%, 45%, 1),
+    box: hsla(204, 83%, 40%, 1),
+    mediamechanics: #83bd41
+);
+
+
+/*
+ =========================================================================== 
+ Theme colors
+ =========================================================================== 
+*/
+
+$theme-colors: (
+    white: #fff,
+    black: #000,
+    red: #c8392f,
+    gray: #d1d1d1,
+    light-gray: #f9f9f9,
+    dark: #222,
+    link: #0096FF,
+    blue: #00a4ff,
+    green: #9acc1a,
+    purple: #8200ff,
+    pink: #ff0061,
+    brown: #9a6825,
+);
+
+
+/*
+ =========================================================================== 
+ Merge all color maps
+ =========================================================================== 
+*/
+
+$colors: map-merge($social-colors, $theme-colors);

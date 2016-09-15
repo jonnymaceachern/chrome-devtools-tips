@@ -1,0 +1,41 @@
+/* 
+
+ ---------------------------------------------------------------------------
+ Bootstrap variables
+ ---------------------------------------------------------------------------
+
+ This file specifies variables to override in /vendor/bootstrap/_variables.scss.
+ This is possible because the variables in /vendor/bootstrap_variables.scss include 
+ a !default flag which is used if the variable is not already assigned a value.
+
+ @link https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_variables.scss
+
+ ---------------------------------------------------------------------------  
+  
+*/
+
+$brand-primary: map-get($colors, google);
+$brand-secondary: map-get($colors, dribbble);
+
+$screen-xs: map-get($mq-breakpoints, xs);
+$screen-sm: map-get($mq-breakpoints, sm);
+$screen-md: map-get($mq-breakpoints, md);
+$screen-lg: map-get($mq-breakpoints, lg);
+
+$icon-font-path: "../fonts/";
+$font-family-sans-serif: "Open Sans", sans-serif;
+$font-family-serif: "Open Sans", sans-serif;
+
+$font-size-base: 16px;
+
+$font-size-h1: 36px;
+$font-size-h2: 30px;
+$font-size-h3: 24px;
+$font-size-h4: 18px;
+$font-size-h5: 14px;
+$font-size-h6: 12px;
+
+$body-bg: #fff;
+
+// Add brand colors to color map to work in utility class loops
+$colors: map-merge($colors, (primary: $brand-primary, secondary: $brand-secondary ));

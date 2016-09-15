@@ -1,0 +1,184 @@
+/* 
+
+ ---------------------------------------------------------------------------
+ Abstracts
+ ---------------------------------------------------------------------------
+
+ Includes all partials that do not directly output CSS.
+ Examples include variables, mixins, and functions.
+
+ ---------------------------------------------------------------------------  
+  
+*/
+
+@import "abstracts/functions";
+@import "abstracts/colors";
+@import "abstracts/breakpoints";
+@import "abstracts/bootstrap";
+@import "abstracts/mixins";
+
+
+/* 
+
+ ---------------------------------------------------------------------------
+ Vendor
+ ---------------------------------------------------------------------------
+
+ This folder includes any third party sources.
+ Examples include bootstrap, compass, and font-awesome.
+
+ ---------------------------------------------------------------------------  
+  
+*/
+
+@import "vendor/mq";
+@import "vendor/animate";
+@import "vendor/bootstrap";
+@import "vendor/bourbon/bourbon";
+@import "vendor/compass-sass-mixins/compass";
+
+
+/* 
+
+ ---------------------------------------------------------------------------
+ Base
+ ---------------------------------------------------------------------------
+
+ Includes scaffolding styles (i.e. what everything is built upon). Examples 
+ include a CSS reset, Normalize.css, typography, and font-face rules.
+
+ ---------------------------------------------------------------------------  
+  
+*/
+
+// @import "base/reset";
+@import "base/fonts";
+@import "base/typography";
+
+
+/* 
+
+ ---------------------------------------------------------------------------
+ Vendor Extensions
+ ---------------------------------------------------------------------------
+
+ Used to override vendor styles without editing the vendor source.
+
+ ---------------------------------------------------------------------------  
+  
+*/
+
+// @import "vendor-extensions/lightbox2";
+
+
+/* 
+
+ ---------------------------------------------------------------------------
+ Utility classes
+ ---------------------------------------------------------------------------
+
+ Utility classes are as simple, composable, and reusable as possible; so they 
+ will end up scattered throughout your markup, performing  their little role. 
+ They must be strictly categorized and tightly focused, or they lose their 
+ raison d’être. They must epitomize the single responsibility principle.
+
+ http://davidtheclark.com/on-utility-classes/
+
+ ---------------------------------------------------------------------------	
+
+*/
+
+@import 'utilities/fills';
+@import 'utilities/colors';
+@import 'utilities/shapes';
+@import 'utilities/strokes';
+@import 'utilities/underline';
+@import 'utilities/dimensions';
+@import 'utilities/backgrounds';
+@import 'utilities/alignment';
+@import 'utilities/spacing';
+@import 'utilities/transitions';
+
+
+/* 
+
+ ---------------------------------------------------------------------------
+ Components
+ ---------------------------------------------------------------------------
+
+ Includes a partial for each component. Examples include forms, buttons, 
+ panels, tables, etc. Components should use the BEM methodology for 
+ structuring and naming classes.
+
+ https://robots.thoughtbot.com/keeping-the-frontend-modular-with-bem
+
+ ---------------------------------------------------------------------------  
+  
+*/
+
+@import "components/forms";
+@import "components/buttons";
+@import "components/icons";
+@import "components/menu";
+@import "components/cursor";
+@import "components/tooltips";
+@import "components/banners";
+@import "components/blockquotes";
+
+
+/* 
+
+ ---------------------------------------------------------------------------
+ Layout
+ ---------------------------------------------------------------------------
+
+ Includes partials for the regions that make up a page.
+
+ ---------------------------------------------------------------------------  
+  
+*/
+
+@import "layout/grid";
+@import "layout/header";
+@import "layout/navigation";
+@import "layout/sidebar";
+@import "layout/footer";
+@import "layout/scrollbar";
+
+/* 
+
+ ---------------------------------------------------------------------------
+ Pages
+ ---------------------------------------------------------------------------
+
+ Includes partials for page-specific styles
+
+ ---------------------------------------------------------------------------  
+  
+*/
+
+// @import "page/front-page";
+// @import "page/store";
+// @import "page/about";
+// @import "page/contact";
+// @import "page/account";
+
+
+/* 
+
+ ---------------------------------------------------------------------------
+ Shame file
+ ---------------------------------------------------------------------------
+
+ The idea of shame.css is that you have a totally new stylesheet reserved 
+ just for your hacky code. The code you have to write to get the release 
+ out on time, but the code that makes you ashamed. This should be kept as
+ small as possible and cleaned up when possible.
+
+ http://csswizardry.com/2013/04/shame-css/
+
+ ---------------------------------------------------------------------------  
+  
+*/
+
+@import "shame";

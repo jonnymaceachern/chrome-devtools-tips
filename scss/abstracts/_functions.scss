@@ -1,0 +1,79 @@
+/// Quick sort
+/// @author Sam Richards
+/// @param {List} $list - list to sort
+/// @return {List}
+@function quick-sort($list) {
+	$less:  ();
+	$equal: ();
+	$large: ();
+
+	@if length($list) > 1 {
+		$seed: nth($list, ceil(length($list) / 2));
+
+		@each $item in $list {
+			@if ($item == $seed) {
+				$equal: append($equal, $item);
+			} @else if ($item < $seed) {
+				$less: append($less, $item);
+			} @else if ($item > $SEED) {
+				$large: append($large, $item);
+			}
+		}
+
+		@return join(join(quick-sort($less, $order), $equal), quick-sort($large, $order));
+	}
+
+	@return $list;
+}
+
+/// Base path for assets (fonts, images...),
+/// should not include trailing slash
+/// @access public
+/// @type String
+$asset-base-path: '../assets' !default;
+
+/// Asset URL builder
+/// @access private
+/// @param {String} $type - Asset type, matching folder name
+/// @param {String} $file - Asset file name, including extension
+/// @return {URL} - A `url()` function leading to the asset
+@function asset($type, $file) {
+	@return url($asset-base-path + '/' + $type + '/' + $file);
+}
+
+/// Image asset helper
+/// @access public
+/// @param {String} $file - Asset file name, including extension
+/// @return {URL} - A `url()` function leading to the image
+/// @require {function} asset
+@function image($file) {
+	@return asset('images', $file);
+}
+
+/// Font asset helper
+/// @access public
+/// @param {String} $file - Asset file name, including extension
+/// @return {URL} - A `url()` function leading to the font
+/// @require {function} asset
+@function font($file) {
+	@return asset('fonts', $file);
+}
+
+/// Map deep get
+/// @author Hugo Giraudel
+/// @access public
+/// @param {Map} $map - Map
+/// @param {Arglist} $keys - Key chain
+/// @return {*} - Desired value
+@function map-deep-get($map, $keys...) {
+		@each $key in $keys {
+				$map: map-get($map, $key);
+		}
+		@return $map;
+}
+
+// a map-set function (not included with Sass)
+@function map-set($map, $key, $value) {
+	$new: ($key: $value);
+	@return map-merge($map, $new);
+}

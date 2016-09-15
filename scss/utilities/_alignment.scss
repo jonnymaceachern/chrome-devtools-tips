@@ -1,0 +1,32 @@
+/* 
+
+ ---------------------------------------------------------------------------
+ Text alignment
+ ---------------------------------------------------------------------------
+
+ 
+
+ ---------------------------------------------------------------------------  
+	
+*/
+
+// Loop through the breakpoints map and create an alignmnet for each
+@each $value, $name in $mq-breakpoints {
+
+	@include mq($name){
+
+		.text-#{$name} {
+			&-left {
+				text-align: left;
+			}
+			&-center {
+				text-align: center;
+			}
+			&-right {
+				text-align: right;
+			}
+		}
+		
+	}
+
+}

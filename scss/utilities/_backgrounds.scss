@@ -1,0 +1,37 @@
+.gradient--bottom-dark {
+	// http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.65+100
+	@include filter-gradient(#000000, #000000, vertical); // IE6-9
+	@include background(linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%));
+}
+
+.gradient--diag-colored {
+	@include filter-gradient(#b65eff, #ef017c, horizontal); // IE6-9 fallback on horizontal gradient
+	@include background(linear-gradient(left top,  rgba(182,94,255,0.66) 0%,rgba(239,1,124,0.64) 100%));
+}
+
+.gradient--diag-blue {
+	// http://colorzilla.com/gradient-editor/#32c8ff+0,7db9e8+100&0.82+0,0+100
+	@include filter-gradient(#32c8ff, #7db9e8, horizontal); // IE6-9 fallback on horizontal gradient
+	@include background-image(linear-gradient(left top,  rgba(50,200,255,0.82) 0%,rgba(125,185,232,0) 100%));
+	opacity: 0.8;
+}
+
+.gradient--across-navy-blue {
+	background: #24C6DC; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #24C6DC , #514A9D); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #24C6DC , #514A9D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.gradient--across-orange-pink {
+	background: #FF5F6D; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+	background: -webkit-linear-gradient(right, #FF5F6D, #FFC371);
+	background: -o-linear-gradient(right, #FF5F6D, #FFC371);
+	background: linear-gradient(to left, #FF5F6D, #FFC371); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+@each $color, $value in $colors {
+	.bg-#{$color} {
+		background: $value;
+	}
+}
+
