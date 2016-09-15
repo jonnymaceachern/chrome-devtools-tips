@@ -91,7 +91,28 @@ $( function() {
 		// - Calculated automatically unless specified
 		// - Set to 0 to disable movement along an axis
 		parallaxBackgroundHorizontal: null,
-		parallaxBackgroundVertical: null
+		parallaxBackgroundVertical: null,
+
+		dependencies: [
+			// Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+			{ src: 'js/libs/js/classList.js', condition: function() { return !document.body.classList; } },
+
+			// // Interpret Markdown in <section> elements
+			{ src: 'js/libs/reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'js/libs/reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+
+			// // Syntax highlight for <code> elements
+			// { src: 'js/reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+
+			// // Zoom in and out with Alt+click
+			// { src: 'js/reveal/plugin/zoom-js/zoom.js', async: true },
+
+			// // Speaker notes
+			// { src: 'js/reveal/plugin/notes/notes.js', async: true },
+
+			// // MathJax
+			// { src: 'js/reveal/plugin/math/math.js', async: true }
+		]
 
 	});
 
