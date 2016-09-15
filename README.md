@@ -1,1 +1,1 @@
-# devtools-tips-presenation
+# chrome-devtools-tips
