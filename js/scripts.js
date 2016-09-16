@@ -9,7 +9,7 @@ $( function() {
 		progress: true,
 
 		// Display the page number of the current slide
-		slideNumber: false,
+		slideNumber: true,
 
 		// Push each slide change to the browser history
 		history: false,
@@ -70,7 +70,7 @@ $( function() {
 		previewLinks: false,
 
 		// Transition style
-		transition: 'default', // none/fade/slide/convex/concave/zoom
+		transition: 'none', // none/fade/slide/convex/concave/zoom
 
 		// Transition speed
 		transitionSpeed: 'default', // default/fast/slow

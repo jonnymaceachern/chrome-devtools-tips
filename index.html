@@ -10,24 +10,126 @@
 	<script src="js/libs/head.min.js"></script>
 	<script src="js/libs/reveal/reveal.js"></script>
 	<script src="js/libs/jquery-3.1.0.min.js"></script>	
-	<script src="js/scripts.js"></script>	
+	<script src="js/scripts.js"></script>
 
 	<div class="reveal">
 		<div class="slides">
 				<section>
-					<section>step 1</section>
-					<section>step 2</section>
+					<div class="media">
+						<div class="media-left media-middle">
+							<img src="images/chrome-logo.png" alt="Chrome Logo">
+						</div>
+						<div class="media-body media-middle">
+							<span>Chrome Developer Tools Tips</span>
+						</div>
+					</div>
 				</section>
-				<section data-markdown>
-					<script type="text/template">
-						## Page Title
 
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, eaque.
+				<section>
+					<div>SCSS and sourcemaps</div>
+				</section>
+
+				<section>
+					<div>Use $0, $1, $2, etc, to reference recently selected elements</div>
+				</section>
+
+				<section>
+					<div>Use <code>$_</code> to reference recently evaluated expressions</div>
+				</section>
+	
+				<section>
+					<div>Use <code>console.table()</code> to display 2-dimensional data as a table</div>
+				</section>
+
+				<section>
+					<div>Use <code>debugger;</code> anywhere in your javascript to add a breakpoint</div>
+				</section>
+
+				<section>
+					<div>With dev tools open, click and hold the refresh button to to choose the type of reload (hard, soft, empty cache)</div>
+				</section>
+
+				<section>
+					<div>Search by selector in elements panel</div>
+				</section>
+
+				<section>
+					<div>Use <code>monitorEvents()</code> to log events being fired</div>
+				</section>
+
+				<section>
+					<div><code>Ctrl+click</code> a CSS rule or property to go to it in the source. Use {} to expand.</div>
+					<div><small>Note: it will only display the context in which the rule is generated, therefore if it is built with a mixin, it will goto the mixin rather than where the mixin was included.</small></div>
+				</section>
+
+				<section>
+					<div>Use <code>copy()</code> to set your clipboard value. Can be used with objects.</div>
+				</section>
+
+				<section>
+					<div>In the <strong>Sources</strong> tab, you can drag and drop a file directly into your editor.</div>
+				</section>
+
+				<section>
+					<div>In the <strong>Elements > Styles</strong> pane, click a color value preview box to open a colorpicker. While the color picker is opened, an eyedropper tool is available while hovering over any contents in the window.</div>
+				</section>
+
+				<section>
+					<div>Use <code>console.profile()</code> and <code>console.profileEnd()</code> to dynamically call the devtools profiler.</div>
+					<script>
+						// console.profile('test');
+						// setTimeout(function(){
+						// 	console.profileEnd('test');
+						// }, 3000);
 					</script>
+				</section>
+
+				<section>
+					<div><code>inspect()</code> elements from commandline (e.g. loop through all images at an 1 second interval)</div>
+				</section>
+
+				<section>
+					<div>Use <code>$$()</code> as a shorthand for <code>document.querySelectorAll</code></div>
+				</section>
+
+				<section>
+					<div><code>Shift+click</code> a color rule preview to change its color format</div>
+				</section>
+
+				<section>
+					<div>Blackbox scripts to ignore them when stepping through code (e.g. jquery)</div>
+					<!--
+					<div id="foo"></div>
+					<div id="bar"></div>
+					<script>
+						debugger;
+						var foo = $('#foo');
+						var bar = $('#bar');
+					</script> -->
+				</section>
+
+				<section>
+					<div>Preview and tweak a bezier curve CSS rule</div>
+					<iframe src="http://cubic-bezier.com" width="800" height="800"></iframe>
+				</section>
+
+				<section>
+					<div>Use <code>Ctrl+M</code> to jump between matching brackets</div>
+				</section>
+
+				<section>
+					<div>Run chrome using the <code>--auto-open-devtools-for-tabs</code> to automatically display a console upon opening a new tab.</div>
+				</section>
+
+				<section>
+					<div>Use <code>Ctrl+shift+P</code> to bring up the consoles command pallete (e.g. Type "Go offline")</div>
+				</section>
+
+				<section>
+					<img src="https://media4.giphy.com/media/Y2nbrJyAR6RiM/200_s.gif" alt="">
 				</section>
 		</div>
 	</div>
-
 
 </body>
 </html>
