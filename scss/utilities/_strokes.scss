@@ -11,7 +11,7 @@
 */
 
 @each $color, $i in $colors {
-	.stroke--#{$color} {
+	.border-#{$color} {
 		border-color: 1px solid $i;
 	}
 }

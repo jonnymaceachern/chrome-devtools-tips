@@ -27,10 +27,32 @@
 
 				<section>
 					<div>SCSS and sourcemaps</div>
+					<br />
+					<div class="btn btn-primary">
+						Inspect me
+					</div>
+					<section>
+						1
+					</section>
+					<section>
+						2
+					</section>
 				</section>
 
 				<section>
 					<div>Use $0, $1, $2, etc, to reference recently selected elements</div>
+
+					<div class="row pad">
+						<div class="col-sm-4">
+							<div class="color-red border-red">A</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="color-blue border-blue">B</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="color-green border-green">C</div>
+						</div>
+					</div>
 				</section>
 
 				<section>
@@ -39,10 +61,49 @@
 	
 				<section>
 					<div>Use <code>console.table()</code> to display 2-dimensional data as a table</div>
-				</section>
+
+<pre>
+<code>
+var users = [
+	{
+		name: "Jonny MacEachern",
+		title: "Developer"
+	},
+	{
+		name: "Craig MacMaster",
+		title: "Director of Digital Marketing"
+	},
+	{
+		name: "Jason Riley",
+		title: "Director of Client Services"
+	}
+];
+
+console.table( users );
+</code>
+</pre>
+			</section>
 
 				<section>
 					<div>Use <code>debugger;</code> anywhere in your javascript to add a breakpoint</div>
+					<div id="foo"></div>
+					<div id="bar"></div>
+<!-- 					<script>
+						debugger;
+						var foo = $('#foo');
+						var bar = $('#bar');
+					</script>  -->
+				</section>
+
+				<section>
+					<div>Blackbox scripts to ignore them when stepping through code (e.g. jquery)</div>
+<!-- 					<div id="foo"></div>
+					<div id="bar"></div>
+					<script>
+						debugger;
+						var foo = $('#foo');
+						var bar = $('#bar');
+					</script>  -->
 				</section>
 
 				<section>
@@ -51,10 +112,15 @@
 
 				<section>
 					<div>Search by selector in elements panel</div>
+					<div class="btn btn-primary" id="search-by-selector">id of search-by-selector</div>
 				</section>
 
 				<section>
 					<div>Use <code>monitorEvents()</code> to log events being fired</div>
+					<div class="pad">
+						<div class="btn btn-primary" id="monitorEvents">Click me</div>
+						<code>monitorEvents( document.body, 'click' )</code>
+					</div>
 				</section>
 
 				<section>
@@ -76,12 +142,15 @@
 
 				<section>
 					<div>Use <code>console.profile()</code> and <code>console.profileEnd()</code> to dynamically call the devtools profiler.</div>
-					<script>
-						// console.profile('test');
-						// setTimeout(function(){
-						// 	console.profileEnd('test');
-						// }, 3000);
-					</script>
+<pre>
+<code>
+console.profile('test');
+
+setTimeout(function(){
+	console.profileEnd('test');
+}, 3000);
+</code>
+</pre>
 				</section>
 
 				<section>
@@ -97,24 +166,12 @@
 				</section>
 
 				<section>
-					<div>Blackbox scripts to ignore them when stepping through code (e.g. jquery)</div>
-					<!--
-					<div id="foo"></div>
-					<div id="bar"></div>
-					<script>
-						debugger;
-						var foo = $('#foo');
-						var bar = $('#bar');
-					</script> -->
-				</section>
-
-				<section>
 					<div>Preview and tweak a bezier curve CSS rule</div>
 					<iframe src="http://cubic-bezier.com" width="800" height="800"></iframe>
 				</section>
 
 				<section>
-					<div>Use <code>Ctrl+M</code> to jump between matching brackets</div>
+					<div>Use <code>Ctrl+M</code> to jump between matching brackets (CSS)</div>
 				</section>
 
 				<section>

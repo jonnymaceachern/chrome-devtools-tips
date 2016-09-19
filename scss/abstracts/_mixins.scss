@@ -210,29 +210,29 @@
 	padding-top: ($base-padding * $multiplier);
 	padding-bottom: ($base-padding * $multiplier);
 
-	&--short {
+	&-short {
 		padding-top: ($base-padding * $multiplier) / 2;
 		padding-bottom: ($base-padding * $multiplier) / 2;
 	}
 
-	&--short-top {
+	&-short-top {
 		padding-top: ($base-padding * $multiplier) / 2;
 	}
 
-	&--short-bottom {
+	&-short-bottom {
 		padding-bottom: ($base-padding * $multiplier) / 2;
 	}
 	
-	&--tall {
+	&-tall {
 		padding-top: ($base-padding * $multiplier ) * 1.5;
 		padding-bottom: ($base-padding * $multiplier ) * 1.5;
 	}
 
-	&--tall-top {
+	&-tall-top {
 		padding-top: ($base-padding * $multiplier ) * 1.5;
 	}
 
-	&--tall-bottom {
+	&-tall-bottom {
 		padding-bottom: ($base-padding * $multiplier ) * 1.5;
 	}
 }
